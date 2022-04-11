@@ -22,7 +22,7 @@ server.use(mainRoutes);
 server.use(express.urlencoded({extended:true}));
 
 server.use((req:Request,res:Response)=>{
-  res.status(404).send('Pagina nao encontrada')
+  res.status(404).render('pages/404');
 });
 
 server.listen(process.env.PORT);
